@@ -1,0 +1,44 @@
+### Main page
+GET http://localhost:3000
+
+### Add a user
+
+POST http://localhost:3000/register
+Content-Type: application/json
+
+{
+    "username": "mamawebo",
+    "password": "123"
+}
+
+### Getting all users
+
+GET http://localhost:3000/users 
+
+### Getting a user by it's id
+
+GET http://localhost:3000/users/55
+
+### Deleting a user
+
+DELETE http://localhost:3000/users/52
+
+### Update a users
+
+PUT http://localhost:3000/users/55
+Content-Type: application/json
+
+{
+    "newUsername": "msa",
+    "newPassword": "awd"
+}
+
+### Log in
+// Here the password must be a string due the DB datatypes
+GET http://localhost:3000/login
+Content-Type: application/json
+
+{
+    "username": "msa",
+    "password": "awd"
+}
